@@ -1,0 +1,58 @@
+0 Projekt: TERMINARZ
+0.1 CEL: narzędzie do zarządzania czasem i planowania zadań
+0.2 PRZYSZŁOŚĆ: aplikacja mobilna, integracja z kalendarzem google(?)
+0.3 WERSJE FREE i PRO. Free - terminal i lista zadań, PRO - projekty i statystyki 
+
+1 BUDOWA:
+    1.1 STRONA LOGOWANIA
+    1.2 WIDOK TERMINARZA
+    1.2.1 KALENDARZ
+    1.2.2 ZADANIA DO DNIA
+    1.2.3 WYDARZENIA NADCHODZĄCE
+    1.2.3 ZADANIA NIEPRZYPISANE
+    
+2 PANELE FREE:
+    2.1 PLAN DNIA - KALENDARZ
+        Edycja:
+            Dodaj wydarzenie do kalendarza
+            Ustaw priorytet wydarzenia
+            Usuń wydarzenie z kalendarza
+
+    2.2 ZADANIA NA DANY DZIEŃ
+        Edycja:
+            Dodaj zadanie do listy dnia
+            Ustaw priorytet zadania
+            Zaznacz jako wykonane
+            Usuń zadanie z listy dnia
+
+    2.3 NADCHODZĄCE WYDARZENIA
+    Pokazuje listę wydarzeń oznaczonych jako ważne
+    Możliwość edycji
+
+    2.4 ZADANIA NIEPRZYPISANE
+        Edycja:
+            Dodaj zadanie do listy dnia
+            Ustaw priorytet zadania
+            Zaznacz jako wykonane z datą zaznaczenia i podepnij do właściwego dnia
+            Usuń zadanie z listy
+
+3 PANELE PRO 
+    3.1 TWORZENIE PROJEKTÓW
+    3.2 POSTĘPY I STATYSTYKI
+
+FUNKCJONALNOŚCI:
+
+Elementy między oknami można przerzycać myszką - przeciągnij-upuść
+Po kliknięciu na element pojawia sie okno z formularzem
+Formularze planów i zadań pozwalają na dodanie opisów
+Zadania można grupować w projekty
+Statystyki wskazują postępy w projekcie
+Możliwość wyszukiwania zadań i wydarzeń
+Przesywanie dni strzałkami lub palcem
+
+BAJERY:
+Nagłówek kolorowy z wyraźymi ikonami
+Widoki - dzień, tydzień, miesiąc, rok
+
+24.05 utworzyć siatkę bootstrapa
+26.05 

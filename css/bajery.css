@@ -1,0 +1,5 @@
+@element .mincharacters and (min-characters: 30) {
+  .mincharacters {
+    background: gold;
+  }
+}

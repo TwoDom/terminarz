@@ -1,0 +1,207 @@
+/*RESET CSS*/
+body {
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+
+/*VARIABLES*/
+/*MEASURES*/
+/*COLOR SETS*/
+/*PURPLE JELLYFISH*/
+/*BLUE-ORANGE BULB*/
+/*MAIN VIEW TEMPLATE*/
+/*WELCOME*/
+.elementHidden {
+  display: none;
+}
+
+.pageShow {
+  height: 10vh;
+}
+
+header {
+  background-image: url("../img/jellyfish.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav {
+  width: 95%;
+  margin: 0 auto;
+  height: 40px;
+  margin: 8px auto;
+}
+
+.navbarMenu {
+  line-height: 100%;
+}
+
+.navbarMenu li {
+  border: 2px solid purple;
+  border-radius: 7px;
+}
+
+.navRight {
+  float: right;
+}
+
+/*dodac @media width x2 przy mniejszej rozdzielczosci*/
+#page {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  height: 70%;
+}
+
+.container {
+  background-color: lightcyan;
+  width: 95%;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.motto {
+  line-height: 100%;
+}
+
+.hideColumn {
+  display: none;
+}
+
+.column {
+  background-color: #aa0559;
+  color: white;
+  height: 100%;
+  margin: 0 3px;
+}
+
+footer {
+  background-image: url("../img/jellyfish.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 0vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+/*DAY TEMPLATE*/
+#dayPlan {
+  background-color: green;
+  color: white;
+  height: 100%;
+}
+
+/*WEEK TEMPLATE*/
+ul {
+  -webkit-padding-start: 0;
+}
+
+ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+/*MONTH TEMPLATE*/
+.dniMiesiaca {
+  background-color: black;
+  color: aliceblue;
+  width: 100%;
+  display: inline-block;
+}
+
+.dniMiesiaca ul li {
+  width: 10%;
+  height: 20%;
+  line-height: 20px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*YEAR TEMPLATE*/
+.aaa {
+  background: lightpink;
+}
+
+.bbb {
+  background-color: cadetblue;
+}
+
+.ccc {
+  background-color: chartreuse;
+}
+
+.years {
+  margin: 8px auto;
+  height: 50px;
+}
+
+.years .btn {
+  background-color: purple;
+  color: white;
+  font-size: 14px;
+}
+
+.years .btn:hover {
+  font-size: 22px;
+}
+
+.years .yearBtn {
+  font-size: 18px;
+}
+
+.month {
+  height: 20%;
+  line-height: 20%;
+  font-size: 30px;
+  border: 2px solid purple;
+  text-align: center;
+  margin: 10px 0.5%;
+  width: 24%;
+  border-radius: 40px;
+  background-color: lightpink;
+}
+
+.row {
+  border-color: 1px solid lightpink;
+}
+
+.month::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*ZADANIE TEMPLATE*/
+form {
+  background-color: skyblue;
+}
+
+.vidge, .asi {
+  background-color: darkcyan;
+  /*    margin-right: 5px;*/
+}
+
+/*TASKS TEMPLATE*/
+.done-true {
+  text-decoration: line-through;
+}
