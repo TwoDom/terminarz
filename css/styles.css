@@ -3,7 +3,6 @@ body {
   line-height: normal;
   padding: 0;
   margin: 0;
-  border: 3px dotted red;
 }
 
 /*IMPORT EXTERNAL FILES*/
@@ -24,6 +23,7 @@ header {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  min-height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,9 +54,8 @@ nav {
 /*dodac @media width x2 przy mniejszej rozdzielczosci*/
 #page {
   margin: 0 auto;
-  margin-bottom: 10px;
   width: 100%;
-  height: 100%;
+  height: 70%;
 }
 
 .container {
