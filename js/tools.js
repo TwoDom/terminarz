@@ -11,35 +11,51 @@ $enterButton.on('click', function(){
 });
 
  /*Load sidebar*/
+
 $dreamListBtn = $("#dreamListBtn");
 $dreamListBtn.on('click', function(){
 	$dreamList = $('.dreamList');
 	$dreamList.toggleClass("hidePanel");
+	resizePanel();
 })
 
 $taskListBtn = $("#taskListBtn");
 $taskListBtn.on('click', function(){
 	$taskList = $('.taskList');
 	$taskList.toggleClass("hidePanel");
+	resizePanel();
 })
 
 $todayTasksBtn = $("#todayTasksBtn");
 $todayTasksBtn.on('click', function(){
 	$todayTasks = $('.todayTasks');
 	$todayTasks.toggleClass("hidePanel");
+	resizePanel();
 })
 
 $importantBtn = $("#importantBtn");
 $importantBtn.on('click', function(){
 	$importantDates = $('.importantDates');
 	$importantDates.toggleClass("hidePanel");
+	console.log("done!")
+	resizePanel();
 })
 
 /*Change panel size*/
-$panelBtn = $("panelLoader");
-$panelBtn.on("click", function(){
+
+function resizePanel(){
 	var hiddenPanels = $(".hidePanel");
-	if (hiddenPanels.length == 1){
-		$("#myBoard").removeClass().addClass("col-md-10");
+	console.log(hiddenPanels.length)
+	$myBoard = $("#myBoard");
+	if (hiddenPanels.length === 3){
+		$myBoard.removeClass().addClass("panel col-md-{9+1}");
+	} else if (hiddenPanels.length === 2) {
+		$myBoard.removeClass().addClass("panel col-md-8");
+	} else if (hiddenPanels.length === 1){
+		$myBoard.removeClass().addClass("panel col-md-6");
+	} else if (hiddenPanels.length === 0){
+		$myBoard.removeClass().addClass("panel col-md-4");
+	} else {
+		$myBoard.removeClass().addClass("panel col-md-12")
 	};
-});
+	};
