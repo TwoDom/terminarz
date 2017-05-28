@@ -10,57 +10,36 @@ $enterButton.on('click', function(){
     $footer.animate({height: '5vh'},1000);
 });
 
-// /*Load sidebars*/
-// $dreamLoader = $('.dreamLoader');
-// $dreamLoader.on('click', function(){
-//
-//    $dreamList = $('.dream-list');
-//    $dreamList.removeClass('.hideColumn');
-// });
-
+ /*Load sidebar*/
 $dreamListBtn = $("#dreamListBtn");
 $dreamListBtn.on('click', function(){
 	$dreamList = $('.dreamList');
-	$dreamList.toggleClass("hideColumn");
+	$dreamList.toggleClass("hidePanel");
 })
 
 $taskListBtn = $("#taskListBtn");
 $taskListBtn.on('click', function(){
 	$taskList = $('.taskList');
-	$taskList.toggleClass("hideColumn");
+	$taskList.toggleClass("hidePanel");
 })
 
 $todayTasksBtn = $("#todayTasksBtn");
 $todayTasksBtn.on('click', function(){
 	$todayTasks = $('.todayTasks');
-	$todayTasks.toggleClass("hideColumn");
+	$todayTasks.toggleClass("hidePanel");
 })
 
 $importantBtn = $("#importantBtn");
 $importantBtn.on('click', function(){
 	$importantDates = $('.importantDates');
-	$importantDates.toggleClass("hideColumn");
+	$importantDates.toggleClass("hidePanel");
 })
 
-
-function myMove() {
-  var elem = document.getElementById("myAnimation");
-  var pos = 0;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++;
-
-      elem.style.left = pos + 'px';
-    }
-  }
-}
-// function myBoardSize(){
-// 	if (el.hasClass == 'hideColumn') {
-//
-// 	} else {
-//
-// 	}
-// }
+/*Change panel size*/
+$panelBtn = $("panelLoader");
+$panelBtn.on("click", function(){
+	var hiddenPanels = $(".hidePanel");
+	if (hiddenPanels.length == 1){
+		$("#myBoard").removeClass().addClass("col-md-10");
+	};
+});

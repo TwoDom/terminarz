@@ -26,5 +26,6 @@ app.controller('todoListController', ['$scope', '$filter', function($scope, $fil
         $scope.todos.push({text:$scope.formTodoText, done: false});
         $scope.formTodoText = '';
     };
+
     
 }]);

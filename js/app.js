@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $board = $('.myBoard');
+    $board = $('#myBoard');
 
     $('.menuLoader').on('click', function(e) {
         var filename = $(this).data('file');
@@ -10,8 +10,6 @@ $(document).ready(function() {
         } );
         return false;
     });
-
-
 });
 
 function getRealFilename(filename) {

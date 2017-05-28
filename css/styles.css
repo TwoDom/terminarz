@@ -74,11 +74,11 @@ nav {
   line-height: 100%;
 }
 
-.hideColumn {
+.hidePanel {
   display: none;
 }
 
-.column {
+.panel {
   background-color: #aa0559;
   color: white;
   height: 100%;

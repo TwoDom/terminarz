@@ -17,7 +17,7 @@ $footer-height: 0vp;
 
 $button-border: 2px solid purple;
 $button-background: lightpink;
-$column-background: #aa0559;
+$panel-background: #aa0559;
 
 /*BLUE-ORANGE BULB*/
 
@@ -83,12 +83,12 @@ nav {
     line-height: 100%;
 }
 
-.hideColumn {
+.hidePanel {
     display: none;
 }
 
-.column {
-	background-color: $column-background;
+.panel {
+	background-color: $panel-background;
 	color: white;
 	height: 100%;
 	margin:0 3px;
