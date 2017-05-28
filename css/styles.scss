@@ -1,13 +1,17 @@
 /*RESET CSS*/
 body {
-    line-height: normal;
-    padding: 0;
-    margin: 0;
+	line-height: normal;
+	padding: 0;
+	margin: 0;
+	border: 3px dotted red;
 }
+/*IMPORT EXTERNAL FILES*/
+// @insert 'month';
 
 /*VARIABLES*/
 /*MEASURES*/
-$header-hight: 13vh;
+
+$header-hight: 20%;
 $nav-height: 40px;
 $page-height: 70%;
 $footer-height: 0vp;
@@ -25,66 +29,61 @@ $panel-background: #aa0559;
 /*WELCOME*/
 
 .elementHidden {
-    display: none;
-}
-
-.pageShow {
-    height: 10vh;
+	display: none;
 }
 
 header {
-    background-image: url("../img/jellyfish.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+	background-image: url("../img/jellyfish.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
 }
 
 nav {
-    width: 95%;
-    margin: 0 auto;
-    height: 40px;
-    margin: 8px auto;
+	width: 95%;
+	margin: 0 auto;
+	height: 40px;
+	margin: 8px auto;
 }
 .navbarMenu {
-    line-height: 100%;
-    li {
-        border: $button-border;
-        border-radius: 7px;
-    }
+	line-height: 100%;
+	li {
+		border: $button-border;
+		border-radius: 7px;
+	}
 }
 .navRight {
-    float: right;
+	float: right;
 }
 
 /*dodac @media width x2 przy mniejszej rozdzielczosci*/
 
 #page {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    text-align: center;
-    width: 100%;
-    height: 70%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 100%;
 }
 .container {
-    background-color: lightcyan;
-    width: 95%;
-    height: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+	background-color: lightcyan;
+	width: 95%;
+	height: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .motto{
-    line-height: 100%;
+	line-height: 100%;
 }
 
 .hidePanel {
-    display: none;
+	display: none;
 }
 
 .panel {
@@ -95,18 +94,18 @@ nav {
 }
 
 footer {
-    background-image: url("../img/jellyfish.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 0vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: fixed;
-    bottom: 0;
+	background-image: url("../img/jellyfish.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 0vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	position: fixed;
+	bottom: 0;
 }
 
 /*DAY TEMPLATE*/
@@ -119,115 +118,93 @@ footer {
 /*WEEK TEMPLATE*/
 
 ul {
-    -webkit-padding-start: 0;
-    li {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 5px;
-    }
+	-webkit-padding-start: 0;
+	li {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 5px;
+	}
+}
+
+button {
+	background-color: #000;
+	color: white;
 }
 
 
-/*MONTH TEMPLATE*/
 
-//.calosc {
-//    background-image: url("../img/jellyfish.jpg");
-//    width: 100%;
-//    height: 100%;
-//}
 
-.dniMiesiaca {
-    background-color: black;
-    color: aliceblue;
-    width: 100%;
-		display: inline-block;
-
-    ul {
-        li {
-            width: 10%;
-            height: 20%;
-            line-height: 20px;
-            border: 1px solid white;
-            // font-size: 20px;
-						// margin-bottom: 10%;
-						display: flex;
-						// flex-direction: column;
-						justify-content: center;
-						align-items: center;
-        }
-    }
-}
 
 /*YEAR TEMPLATE*/
 .aaa {
-    background: $button-background;
+	background: $button-background;
 }
 
 .bbb {
-    background-color: cadetblue;
+	background-color: cadetblue;
 }
 
 .ccc {
-    background-color: chartreuse;
+	background-color: chartreuse;
 }
 
 .years{
-    margin: 8px auto;
-		height: 50px;
-    .btn{
-        background-color: purple;
-        color: white;
-        font-size: 14px;
-				// height: 30px;
-				// width: 50px;
-				&:hover {
-					font-size: 22px;
-				}
-    }
-		.yearBtn {
-			font-size: 18px;
+	margin: 8px auto;
+	height: 50px;
+	.btn{
+		background-color: purple;
+		color: white;
+		font-size: 14px;
+		// height: 30px;
+		// width: 50px;
+		&:hover {
+			font-size: 22px;
 		}
+	}
+	.yearBtn {
+		font-size: 18px;
+	}
 }
 
 .month {
-    height: 20%;
-    line-height: 20%;
-    font-size: 30px;
-    border: $button-border;
-    text-align: center;
-    margin: 10px 0.5%;
-    width: 24%;
-    border-radius: 40px;
-    background-color: $button-background;
+	height: 20%;
+	line-height: 20%;
+	font-size: 30px;
+	border: $button-border;
+	text-align: center;
+	margin: 10px 0.5%;
+	width: 24%;
+	border-radius: 40px;
+	background-color: $button-background;
 }
 
 .row {
-    border-color: 1px solid $button-background;
+	border-color: 1px solid $button-background;
 }
 .month::after{
-    content: "";
-    clear: both;
-    display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 
 
 /*ZADANIE TEMPLATE*/
 form {
-    //    display: flex;
-    //    flex-direction: column;
-    //    justify-content: center;
-    //    align-items: center;
-    background-color: skyblue;
+	//    display: flex;
+	//    flex-direction: column;
+	//    justify-content: center;
+	//    align-items: center;
+	background-color: skyblue;
 }
 
 .vidge, .asi {
-    background-color: darkcyan;
-    /*    margin-right: 5px;*/
+	background-color: darkcyan;
+	/*    margin-right: 5px;*/
 }
 
 /*TASKS TEMPLATE*/
 .done-true{
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
