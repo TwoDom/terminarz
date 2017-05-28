@@ -3,6 +3,10 @@ body {
 	line-height: normal;
 	padding: 0;
 	margin: 0;
+	border:3px dotted orange;
+}
+html{
+	border: 3px dotted blue;
 }
 /*IMPORT EXTERNAL FILES*/
 // @insert 'month';
@@ -62,6 +66,9 @@ nav {
 	float: right;
 }
 
+// @media screen and(max-width){
+//
+// }
 /*dodac @media width x2 przy mniejszej rozdzielczosci*/
 
 #page {
@@ -74,7 +81,6 @@ nav {
 	background-color: lightcyan;
 	width: 95%;
 	height: 100%;
-	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
@@ -132,64 +138,6 @@ button {
 	color: white;
 }
 
-
-
-
-
-/*YEAR TEMPLATE*/
-.aaa {
-	background: $button-background;
-}
-
-.bbb {
-	background-color: cadetblue;
-}
-
-.ccc {
-	background-color: chartreuse;
-}
-
-.years{
-	margin: 8px auto;
-	height: 50px;
-	.btn{
-		background-color: purple;
-		color: white;
-		font-size: 14px;
-		// height: 30px;
-		// width: 50px;
-		&:hover {
-			font-size: 22px;
-		}
-	}
-	.yearBtn {
-		font-size: 18px;
-	}
-}
-
-.month {
-	height: 20%;
-	line-height: 20%;
-	font-size: 30px;
-	border: $button-border;
-	text-align: center;
-	margin: 10px 0.5%;
-	width: 24%;
-	border-radius: 40px;
-	background-color: $button-background;
-}
-
-.row {
-	border-color: 1px solid $button-background;
-}
-.month::after{
-	content: "";
-	clear: both;
-	display: table;
-}
-
-
-
 /*ZADANIE TEMPLATE*/
 form {
 	//    display: flex;
@@ -197,11 +145,6 @@ form {
 	//    justify-content: center;
 	//    align-items: center;
 	background-color: skyblue;
-}
-
-.vidge, .asi {
-	background-color: darkcyan;
-	/*    margin-right: 5px;*/
 }
 
 /*TASKS TEMPLATE*/

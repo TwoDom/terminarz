@@ -3,6 +3,11 @@ body {
   line-height: normal;
   padding: 0;
   margin: 0;
+  border: 3px dotted orange;
+}
+
+html {
+  border: 3px dotted blue;
 }
 
 /*IMPORT EXTERNAL FILES*/
@@ -62,7 +67,6 @@ nav {
   background-color: lightcyan;
   width: 95%;
   height: 100%;
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -120,68 +124,9 @@ button {
   color: white;
 }
 
-/*YEAR TEMPLATE*/
-.aaa {
-  background: lightpink;
-}
-
-.bbb {
-  background-color: cadetblue;
-}
-
-.ccc {
-  background-color: chartreuse;
-}
-
-.years {
-  margin: 8px auto;
-  height: 50px;
-}
-
-.years .btn {
-  background-color: purple;
-  color: white;
-  font-size: 14px;
-}
-
-.years .btn:hover {
-  font-size: 22px;
-}
-
-.years .yearBtn {
-  font-size: 18px;
-}
-
-.month {
-  height: 20%;
-  line-height: 20%;
-  font-size: 30px;
-  border: 2px solid purple;
-  text-align: center;
-  margin: 10px 0.5%;
-  width: 24%;
-  border-radius: 40px;
-  background-color: lightpink;
-}
-
-.row {
-  border-color: 1px solid lightpink;
-}
-
-.month::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 /*ZADANIE TEMPLATE*/
 form {
   background-color: skyblue;
-}
-
-.vidge, .asi {
-  background-color: darkcyan;
-  /*    margin-right: 5px;*/
 }
 
 /*TASKS TEMPLATE*/
