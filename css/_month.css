@@ -1,0 +1,67 @@
+/*MONTH TEMPLATE*/
+.monthContainer {
+  padding: 30px 20px;
+  height: 100%;
+}
+
+.monthContainer .monthName {
+  padding: 20px 25px;
+  background-image: url("../img/jellyfish.jpg");
+  text-align: center;
+}
+
+.monthContainer .monthName li {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.monthContainer .monthName .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.monthContainer .monthName .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.monthContainer .monthDay {
+  color: aliceblue;
+  width: 100%;
+  height: 100%;
+}
+
+.monthContainer .monthDay .weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.monthContainer .monthDay .weekdays li {
+  display: inline-block;
+  width: 13%;
+  color: #666;
+  text-align: center;
+  font-size: 16px;
+}
+
+.monthContainer .monthDay .days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.monthContainer .monthDay .days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.monthContainer .monthDay .days li :hover {
+  background: yellow;
+}

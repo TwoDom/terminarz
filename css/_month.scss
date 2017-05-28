@@ -1,0 +1,70 @@
+/*MONTH TEMPLATE*/
+.monthContainer {
+	padding: 30px 20px;
+	height: 100%;
+	.monthName {
+		padding: 20px 25px;
+		background-image: url("../img/jellyfish.jpg");
+		text-align: center;
+		li {
+			font-size: 20px;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+		}
+		.prev {
+			float: left;
+			padding-top: 10px;
+		}
+		.next {
+			float: right;
+			padding-top: 10px;
+		}
+	}
+	.monthDay {
+		color: aliceblue;
+		width: 100%;
+		height: 100%;
+		.weekdays {
+			margin: 0;
+			padding: 10px 0;
+			background-color: #ddd;
+			li {
+				display: inline-block;
+				width: 13%;
+				color: #666;
+				text-align: center;
+				font-size: 16px;
+			}
+		}
+		.days {
+			padding: 10px 0;
+			background: #eee;
+			margin: 0;
+			li {
+				list-style-type: none;
+				display: inline-block;
+				width: 13%;
+				text-align: center;
+				margin-bottom: 10px;
+				font-size:14px;
+				color: #777;
+				:hover {
+					background: yellow;
+				}
+			}
+		}
+	}
+}
+
+// @media screen and (max-width:720px) {
+//     .weekdays li, .days li {width: 13.1%;}
+// }
+//
+// @media screen and (max-width: 420px) {
+//     .weekdays li, .days li {width: 12.5%;}
+//     .days li .active {padding: 2px;}
+// }
+//
+// @media screen and (max-width: 290px) {
+//     .weekdays li, .days li {width: 12.2%;}
+// }
