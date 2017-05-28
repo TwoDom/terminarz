@@ -3,11 +3,6 @@ body {
   line-height: normal;
   padding: 0;
   margin: 0;
-  border: 3px dotted orange;
-}
-
-html {
-  border: 3px dotted blue;
 }
 
 /*IMPORT EXTERNAL FILES*/
@@ -56,7 +51,6 @@ nav {
   float: right;
 }
 
-/*dodac @media width x2 przy mniejszej rozdzielczosci*/
 #page {
   margin: 0 auto;
   width: 100%;
@@ -100,14 +94,13 @@ footer {
   bottom: 0;
 }
 
-/*DAY TEMPLATE*/
-#dayPlan {
-  background-color: green;
+/*ELEMENTS*/
+button {
+  background-color: #000;
   color: white;
-  height: 100%;
+  border-radius: 15px;
 }
 
-/*WEEK TEMPLATE*/
 ul {
   -webkit-padding-start: 0;
 }
@@ -116,20 +109,4 @@ ul li {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 5px;
-}
-
-button {
-  background-color: #000;
-  color: white;
-}
-
-/*ZADANIE TEMPLATE*/
-form {
-  background-color: skyblue;
-}
-
-/*TASKS TEMPLATE*/
-.done-true {
-  text-decoration: line-through;
 }

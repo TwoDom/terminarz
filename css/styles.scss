@@ -3,11 +3,8 @@ body {
 	line-height: normal;
 	padding: 0;
 	margin: 0;
-	border:3px dotted orange;
 }
-html{
-	border: 3px dotted blue;
-}
+
 /*IMPORT EXTERNAL FILES*/
 // @insert 'month';
 
@@ -66,11 +63,6 @@ nav {
 	float: right;
 }
 
-// @media screen and(max-width){
-//
-// }
-/*dodac @media width x2 przy mniejszej rozdzielczosci*/
-
 #page {
 	margin: 0 auto;
 	// margin-bottom: 10px;
@@ -114,14 +106,12 @@ footer {
 	bottom: 0;
 }
 
-/*DAY TEMPLATE*/
-
-#dayPlan{
-	background-color: green;
+/*ELEMENTS*/
+button {
+	background-color: #000;
 	color: white;
-	height: 100%;
+	border-radius: 15px;
 }
-/*WEEK TEMPLATE*/
 
 ul {
 	-webkit-padding-start: 0;
@@ -129,25 +119,5 @@ ul {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
-		margin-bottom: 5px;
 	}
-}
-
-button {
-	background-color: #000;
-	color: white;
-}
-
-/*ZADANIE TEMPLATE*/
-form {
-	//    display: flex;
-	//    flex-direction: column;
-	//    justify-content: center;
-	//    align-items: center;
-	background-color: skyblue;
-}
-
-/*TASKS TEMPLATE*/
-.done-true{
-	text-decoration: line-through;
 }

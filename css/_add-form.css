@@ -1,0 +1,9 @@
+/*ZADANIE TEMPLATE*/
+form {
+  background-color: skyblue;
+}
+
+/*TASKS TEMPLATE*/
+.done-true {
+  text-decoration: line-through;
+}
