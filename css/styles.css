@@ -82,7 +82,7 @@ nav {
   background-color: #aa0559;
   color: white;
   height: 100%;
-  margin: 0 3px;
+  border: 1px solid #fff;
 }
 
 footer {

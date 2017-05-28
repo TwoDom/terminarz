@@ -48,7 +48,7 @@ function resizePanel(){
 	console.log(hiddenPanels.length)
 	$myBoard = $("#myBoard");
 	if (hiddenPanels.length === 3){
-		$myBoard.removeClass().addClass("panel col-md-{9+1}");
+		$myBoard.removeClass().addClass("panel col-md-10");
 	} else if (hiddenPanels.length === 2) {
 		$myBoard.removeClass().addClass("panel col-md-8");
 	} else if (hiddenPanels.length === 1){
