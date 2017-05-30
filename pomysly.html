@@ -20,3 +20,20 @@
     <color name="grey">#9D9D9D</color>
     <color name="blue_grey">#5E7C8B</color>
 </resources>  
+
+function narysujDiva(id){
+	if (id == undefined){
+  return false;
+  };
+	return '<div style="display: none;" id="'+id+'">hello</div>';
+}
+
+var x = narysujDiva('aaa');
+
+$(document).ready(function(){
+	$(x).appendTo('body').fadeIn().delay(500)
+  .queue(function(){ 
+  $(this).css('color: red', 'font-size: 40px');
+  });
+});
+

@@ -12,6 +12,26 @@ $enterButton.on('click', function(){
 
  /*Load sidebar*/
 
+$(function(){
+    $('#switcher a').click(function(e){
+        e.parentDefoult();
+        var rel = $(this).data('rel');
+        $('#tabs div').hide();
+        $('#tabs div').each(function(){
+            var actualTab = $(this).data('tab');
+            if (actualTab == rel){
+                $(this).show();
+            }
+        });
+    });
+});
+
+function myFunction(event) { 
+    var x = event.target;
+    document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
+}
+
+
 $dreamListBtn = $("#dreamListBtn");
 $dreamListBtn.on('click', function(){
 	$dreamList = $('.dreamList');
