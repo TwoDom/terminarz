@@ -1,9 +1,9 @@
 /*RESET CSS*/
-/* line 2, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 body {
   line-height: normal;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 /*IMPORT EXTERNAL FILES*/
 /*VARIABLES*/
@@ -13,11 +13,10 @@ body {
 /*BLUE-ORANGE BULB*/
 /*MAIN VIEW TEMPLATE*/
 /*WELCOME*/
-/* line 33, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 .elementHidden {
-  display: none; }
+  display: none;
+}
 
-/* line 37, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 header {
   background-image: url("../img/jellyfish.jpg");
   background-repeat: no-repeat;
@@ -29,56 +28,56 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white; }
+  color: white;
+}
 
-/* line 51, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 nav {
   width: 95%;
   margin: 0 auto;
   height: 40px;
-  margin: 8px auto; }
+  margin: 8px auto;
+}
 
-/* line 57, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 .navbarMenu {
-  line-height: 100%; }
-  /* line 59, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
-  .navbarMenu li {
-    border: 2px solid purple;
-    border-radius: 7px; }
+  line-height: 100%;
+}
 
-/* line 64, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
+.navbarMenu li {
+  border: 2px solid purple;
+  border-radius: 7px;
+}
+
 .navRight {
-  float: right; }
+  float: right;
+}
 
-/* line 68, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 #page {
   margin: 0 auto;
   width: 100%;
-  height: 70%; }
+  height: 70%;
+}
 
-/* line 74, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 .container {
   background-color: lightcyan;
   width: 95%;
   height: 100%;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+}
 
-/* line 81, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 .motto {
-  line-height: 100%; }
+  line-height: 100%;
+}
 
-/* line 85, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 .hidePanel {
-  display: none; }
+  display: none;
+}
 
-/* line 89, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 .panel {
   background-color: #aa0559;
   color: white;
   height: 100%;
-  border: 1px solid #fff; }
+}
 
-/* line 96, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 footer {
   background-image: url("../img/jellyfish.jpg");
   background-repeat: no-repeat;
@@ -93,22 +92,22 @@ footer {
   position: fixed;
   max-width: 100%;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+}
 
 /*ELEMENTS*/
-/* line 114, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 button {
   background-color: #000;
   color: white;
-  border-radius: 15px; }
+  border-radius: 15px;
+}
 
-/* line 120, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
 ul {
-  -webkit-padding-start: 0; }
-  /* line 122, C:/Users/RENT/Terminarz/wymarzony-terminarz/css/styles.scss */
-  ul li {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; }
+  -webkit-padding-start: 0;
+}
 
-/*# sourceMappingURL=styles.css.map */
+ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
