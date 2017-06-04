@@ -3,29 +3,30 @@ body {
 	line-height: normal;
 	padding: 0;
 	margin: 0;
-//    max-width: 100%;
 }
-
-
 /*IMPORT EXTERNAL FILES*/
 // @insert 'month';
-
-/*VARIABLES*/
-/*MEASURES*/
+/*VARIABLES*/ /*MEASURES*/
 
 $header-hight: 20%;
 $nav-height: 40px;
 $page-height: 70%;
 $footer-height: 0vp;
 
-/*COLOR SETS*/
-/*PURPLE JELLYFISH*/
-
+/*COLOR SETS*/ /*PURPLE JELLYFISH*/
 $button-border: 2px solid purple;
 $button-background: lightpink;
 $panel-background: #aa0559;
 
 /*BLUE-ORANGE BULB*/
+
+@mixin mainTheme {
+	background-image: url("../img/light.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	color: white;
+}
 
 /*MAIN VIEW TEMPLATE*/
 /*WELCOME*/
@@ -35,17 +36,13 @@ $panel-background: #aa0559;
 }
 
 header {
-	background-image: url("../img/jellyfish.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
+	@include mainTheme;
 	height: 100vh;
 	min-height: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: white;
 }
 
 nav {
@@ -61,7 +58,7 @@ nav {
 		border-radius: 7px;
 	}
 }
-.navRight {
+#navRight {
 	float: right;
 }
 
@@ -94,19 +91,14 @@ nav {
 }
 
 footer {
-	background-image: url("../img/jellyfish.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
+	@include mainTheme;
 	height: 0vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: white;
 	position: fixed;
-    max-width: 100%;
-    left: 0;
+  left: 0;
 	bottom: 0;
 }
 

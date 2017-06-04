@@ -21,18 +21,18 @@
 		</header>
 		<div>
 			<nav class="elementHidden">
-				<div class="col-xs-12 col-md-6">
-					<ul class="nav navLeft nav-pills navbarMenu">
+				<div id="navLeft" class="col-xs-12 col-md-6">
+					<ul class="nav nav-pills navbarMenu">
 						<li><a href="#" class="panelLoader" id="dreamListBtn">Dream List</a></li>
-						<li><a href="#" class="panelLoader hidden" data-file="addDream">Dodaj</a></li>
+						<li><a href="#" class="panelLoader" data-file="addDream">Dodaj</a></li>
 						<li><a href="#" class="panelLoader" id="taskListBtn">Task List</a></li>
-						<li><a href="#" class="panelLoader hidden" data-file="addTask">Dodaj</a></li>
+						<li><a href="#" class="panelLoader" data-file="addTask">Dodaj</a></li>
 						<li><a href="#" class="panelLoader" id="todayTasksBtn">Zadania na dziś</a></li>
-						<li><a href="#" class="panelLoader hidden" data-file="addTask">Dodaj</a></li>
+						<li><a href="#" class="panelLoader" data-file="addTask">Dodaj</a></li>
 					</ul>
 				</div>
-				<div class="col-xs-12 col-md-6">
-					<ul class="nav navRight nav-pills navbarMenu">
+				<div  class="col-xs-12 col-md-6">
+					<ul id="navRight" class="nav nav-pills navbarMenu">
 						<li><a href="#" class="menuLoader" data-file="day">Dzień</a></li>
 						<li><a href="#" class="menuLoader" data-file="week">Tydzień</a></li>
 						<li><a href="#" class="menuLoader" data-file="month">Miesiąc</a></li>
@@ -64,6 +64,7 @@
 							<div class="col-md-12">
 								<div>
 									<label>Taski</label>
+									<button class="addButton"><a href="#">Dodaj</a></button>
 									<ul>
 										<li><span>Zadanie</span><button>done</button><button>del</button><button>edit</button></li>
 										<li><span>Panele po lewej rozwijają się do szerokości kolumny</span><button>done</button><button>del</button><button>edit</button></li>
@@ -113,5 +114,6 @@
 	<!-- </div> -->
 	<script src="js/app.js"></script>
 	<script src="js/tools.js"></script>
+    <script src="js/addTask.js"></script>
 </body>
 </html>
