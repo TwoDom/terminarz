@@ -1,9 +1,5 @@
-
-
-
-
 $(function(){
-
+		/*Wysuwane menu*/
      $('#navLeft > ul > li > a').click(function(e){
 
          if ($(this).next().length > 0) {
@@ -17,11 +13,10 @@ $(function(){
                  $(this).next('li').slideDown();
              }
          }
-
      });
 
-
-
+		/*Narysuj okno, które pozwoli na wprowadzanie danych*/
+		/*Jeśli okno jest otwarte zapobiegaj ponownemu otwarciu okna*/
     $('.addButton a').click(function(e){
         e.preventDefault();
         if ($('.communicate').length > 0) {
@@ -58,12 +53,7 @@ $(function(){
             this.remove();
         });
     });
-
 //    $(narysujOkienko()).appendTo('body');
-
-
-
-
 });
 
 

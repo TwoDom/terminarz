@@ -1,57 +1,63 @@
-/*Count list elements*/
-/*Add new task to the list*/
-
 $(function(){
-	$(document).on('click','.addNew',function(e){
-		showInputWindow();
+
+	/*Show input window*/
+	$('.addNew').click(function(e){
+		e.preventDefault();
+		if ($('.addingWindow').length > 0){
+			return alert('Zapisz zmiany');
+		}
+		$(showInputWindow()).appendTo('.nowa');
 	});
+
+	/*Add new task to the list*/
+	$(document).on('click','.acceptBtn',function(e){
+		console.log('hej');
+		var listEl = $('.acceptBtn').prev().val();
+
+		function addElement(){
+			var elem = '';
+			elem = "<li><input type='checkbox'></input>"
+			elem +="<span class='titleEl'>"+ listEl +"</span>"
+			elem +="<span class='glyphicon glyphicon-heart'></span>"
+			elem +="<span class='glyphicon glyphicon-ok'></span>"
+			elem +="<span class='glyphicon glyphicon-pencil'></span>"
+			elem +="<span class='glyphicon glyphicon-remove'></span>"
+			elem +="</li>"
+			return elem;
+		}
+		$(addElement()).appendTo('.nowa');
+	});
+
+	/*Count list elements*/
+	var amount = $('.titleEl').length;
+	$('span.tasks').text(amount);
 
 });
 
-
 function showInputWindow() {
 
-    var inputEl = '';
+	var inputEl = '';
 
-	  	inputEl += "<li>";
-	      inputEl += '<input type="text" class="form-control"/>';
-				inputEl += '<textarea name="description" rows="4"/>'
-	      inputEl += '<button class="btn btn-primary btn-md">Opis</button>';
-				inputEl += '<button class="btn btn-primary btn-md"><span class="glyphicon glyphicon-heart"></span></button>';
-				inputEl += '<button class="btn btn-primary btn-md">Termin</button>';
-				inputEl += '<button class="btn btn-primary btn-md">Dodaj</button>';
-	     	inputEl += '<a class="close">X</a>';
-    	inputEl += '</li>';
-
-    $('.nowa').append(inputEl);
-};
-
-
+	inputEl += "<li class='addingWindow'>";
+	inputEl += '<input type="text" class="form-control"/>';
+	// inputEl += '<textarea name="description" rows="4"/>'
+	// inputEl += '<button class="btn btn-primary btn-md">Opis</button>';
+	// inputEl += '<button class="btn btn-primary btn-md"><span class="glyphicon glyphicon-heart"></span></button>';
+	// inputEl += '<button class="btn btn-primary btn-md">Termin</button>';
+	inputEl += '<button class="btn btn-primary btn-md acceptBtn">Dodaj</button>';
+	inputEl += '<a class="close">X</a>';
+	inputEl += '</li>';
+	return inputEl;
+	// $('.nowa').append(inputEl);
+}
 
 
-
-
-
-
-
-
-
-
-
-// var elem = '';
-//  	elem = "<li><input type="checkbox"></input>"
-// 	elem +="<span class="title">"+ TaskFromInput+"</span>"
-// 	elem +="<span class="glyphicon glyphicon-heart"></span>"
-// 	elem +="<span class="glyphicon glyphicon-ok"></span>"
-// 	elem +="<span class="glyphicon glyphicon-pencil"></span>"
-// 	elem +="<span class="glyphicon glyphicon-remove"></span>"
-// elem +="</li>"
-// }
 // /*Remove ended task from the list*/
 //
 // function markDone(){
 //
 // }
+
 
 
 
