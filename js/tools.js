@@ -10,11 +10,10 @@ $enterButton.on('click', function(){
     $footer.animate({height: '5vh'},1000);
 });
 
- /*Load sidebar*/
-
+ /*Who knows - some idea*/
 $(function(){
     $('#switcher a').click(function(e){
-        e.parentDefoult();
+        e.preventDefoult();
         var rel = $(this).data('rel');
         $('#tabs div').hide();
         $('#tabs div').each(function(){
@@ -26,12 +25,13 @@ $(function(){
     });
 });
 
-function myFunction(event) { 
+function myFunction(event) {
     var x = event.target;
     document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
 }
 
 
+/*Load panels*/
 $dreamListBtn = $("#dreamListBtn");
 $dreamListBtn.on('click', function(){
 	$dreamList = $('.dreamList');
@@ -62,7 +62,6 @@ $importantBtn.on('click', function(){
 })
 
 /*Change panel size*/
-
 function resizePanel(){
 	var hiddenPanels = $(".hidePanel");
 	console.log(hiddenPanels.length)

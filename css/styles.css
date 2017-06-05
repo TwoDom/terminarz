@@ -18,7 +18,7 @@ body {
 }
 
 header {
-  background-image: url("../img/light.jpg");
+  background-image: url("../img/jellyfish.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -58,7 +58,6 @@ nav {
 }
 
 .container {
-  background-color: lightcyan;
   width: 95%;
   height: 100%;
   margin-bottom: 10px;
@@ -73,14 +72,32 @@ nav {
 }
 
 .panel {
-  background-color: #aa0559;
-  color: white;
   height: 100%;
-  border: 1px solid #fff;
+  border: 1px solid purple;
+  opacity: 0.8;
+}
+
+.panel .panelHeader {
+  margin-top: 10px;
+}
+
+.panel .panelHeader .badge {
+  float: right;
+}
+
+.panel .panelHeader button {
+  float: right;
+}
+
+.panel hr {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #ababab;
 }
 
 footer {
-  background-image: url("../img/light.jpg");
+  background-image: url("../img/jellyfish.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -97,9 +114,8 @@ footer {
 
 /*ELEMENTS*/
 button {
-  background-color: #000;
+  background-color: purple;
   color: white;
-  border-radius: 15px;
 }
 
 ul {
@@ -110,4 +126,12 @@ ul li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.done .title {
+  text-decoration: line-through;
+}
+
+.done .glyphicon-ok {
+  color: green;
 }

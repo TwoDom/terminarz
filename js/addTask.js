@@ -1,20 +1,24 @@
+
+
+
+
 $(function(){
 
-    // $('#navLeft > ul > li > a').click(function(e){
-		//
-    //     if ($(this).next().length > 0) {
-    //         e.preventDefault();
-    //         if ($(this).hasClass('active')) {
-    //             $(this).removeClass('active');
-    //             $(this).next('li').slideUp();
-    //         }
-    //         else {
-    //             $(this).addClass('active');
-    //             $(this).next('li').slideDown();
-    //         }
-    //     }
-    //
-    // });
+     $('#navLeft > ul > li > a').click(function(e){
+
+         if ($(this).next().length > 0) {
+             e.preventDefault();
+             if ($(this).hasClass('active')) {
+                 $(this).removeClass('active');
+                 $(this).next('li').slideUp();
+             }
+             else {
+                 $(this).addClass('active');
+                 $(this).next('li').slideDown();
+             }
+         }
+
+     });
 
 
 

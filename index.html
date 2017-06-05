@@ -17,18 +17,18 @@
 	<!-- <div id="mainPage"> -->
 		<header>
 			<h2>Witaj w wymarzonym terminarzu</h2>
-			<button id="pageEnterButton">Wejdź</button>
+			<button id="pageEnterButton" class="btn-lg">Wejdź</button>
 		</header>
 		<div>
 			<nav class="elementHidden">
 				<div id="navLeft" class="col-xs-12 col-md-6">
 					<ul class="nav nav-pills navbarMenu">
-						<li><a href="#" class="panelLoader" id="dreamListBtn">Dream List</a></li>
-						<li><a href="#" class="panelLoader" data-file="addDream">Dodaj</a></li>
-						<li><a href="#" class="panelLoader" id="taskListBtn">Task List</a></li>
-						<li><a href="#" class="panelLoader" data-file="addTask">Dodaj</a></li>
-						<li><a href="#" class="panelLoader" id="todayTasksBtn">Zadania na dziś</a></li>
-						<li><a href="#" class="panelLoader" data-file="addTask">Dodaj</a></li>
+						<li><a href="#" class="panelLoader" id="dreamListBtn">Dream List <span class="badge">5</span></a></li>
+						<!-- <li><a href="#" class="panelLoader" data-file="addDream">Dodaj</a></li> -->
+						<li><a href="#" class="panelLoader" id="taskListBtn">Task List <span class="badge">5</span></a></li>
+						<!-- <li><a href="#" class="panelLoader" data-file="addTask">Dodaj</a></li> -->
+						<li><a href="#" class="panelLoader" id="todayTasksBtn"><span>Zadania na dziś</span><span class="badge">5</span></a></li>
+						<!-- <li><a href="#" class="panelLoader" data-file="addTask">Dodaj</a></li> -->
 					</ul>
 				</div>
 				<div  class="col-xs-12 col-md-6">
@@ -48,14 +48,19 @@
 					<div class="panel dreamList col-md-2 hidePanel">
 						<div class="row">
 							<div class="col-md-12">
-								<label>Dream List</label>
+								<div class="panelHeader">
+									<label>Dream List</label><span class="badge">5</span>
+									<hr>
+								</div>
 								<ul>
-									<li><span>Poprawić guzik na startowej - docelowo panel logowania</span><button>done</button><button>del</button></li>
-									<li><span>Możliwość zmiany wersji kolorystycznej</span><button>done</button><button>del</button></li>
-									<li><span>Dream</span><button>done</button><button>del</button></li>
-									<li><span>Na rozgrzewkę - kafelki z odlotem</span><button>done</button><button>del</button></li>
-									<li><span>W pannelu dzień można przewijać kolejne dni góra-dół wraz z taskami lub same taski</span><button>done</button><button>del</button></li>
+									<li>
+										<span>I have a dream</span>
+										<span class="glyphicon glyphicon-ok"></span>
+										<span class="glyphicon glyphicon-pencil"></span>
+										<span class="glyphicon glyphicon-remove"></span>
+									</li>
 								</ul>
+								<button class="addNew btn-succes btn-md"><span class="glyphicon glyphicon-plus"></span></button>
 							</div>
 						</div>
 					</div>
@@ -63,34 +68,62 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div>
-									<label>Taski</label>
-									<button class="addButton"><a href="#">Dodaj</a></button>
+									<div class="panelHeader">
+										<label>Zadania</label><span class="badge">5</span>
+										<hr>
+									</div>
 									<ul>
-										<li><span>Zadanie</span><button>done</button><button>del</button><button>edit</button></li>
-										<li><span>Panele po lewej rozwijają się do szerokości kolumny</span><button>done</button><button>del</button><button>edit</button></li>
-										<li><span>Można ładować taski na dziś oddzielnie, ale z day ładują się jednocześnie</span><button>done</button><button>del</button><button>edit</button></li>
-										<li><span>Taski można łączyć w projekty np: zakupy, praca magisterska - następuje grupowanie - docelowo kolejna część projektu</span><button>done</button><button>del</button><button>edit</button></li>
+										<li class="done">
+											<input type="checkbox"></input>
+											<span class="title">Task lorem ipsum lorem</span>
+											<span class="glyphicon glyphicon-heart"></span>
+											<span class="glyphicon glyphicon-ok"></span>
+											<span class="glyphicon glyphicon-pencil"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+										</li>
 									</ul>
+									<hr>
+									<button class="addNewBtn btn-succes btn-md"><span class="glyphicon glyphicon-plus"></span></button>
 								</div>
 							</div>
 						</div>
 					</div>
+
+
+
+
+
 					<div class="panel todayTasks col-md-2 hidePanel">
 						<div class="row">
 							<div class="col-md-12">
-								<label>Zadania na dziś:</label>
-								<ul>
-									<li>Po wybraniu miesiąca z kalendarza na prawym panelu pojawiają się zaplanowane wydarzenia<button>done</button><button>del</button><button>edit</button></li>
-									<li>Po wybraniu dnia z miesiąca pojawia się na lewo - zadania - na prawo - plan dnia<button>done</button><button>del</button><button>edit</button></li>
-									<li>Wydarzeniom i zadaniom można nadawać priorytet<button>done</button><button>del</button><button>edit</button></li>
+								<div class="panelHeader">
+									<label>Zadania na dziś:</label><span class="badge">5</span>
+									<hr>
+								</div>
+								<ul class="nowa">
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
 								</ul>
+								<button class="addNew btn-succes btn-md"><span class="glyphicon glyphicon-plus"></span></button>
 							</div>
 						</div>
 					</div>
+
+
+
+
+
 					<div class="panel col-md-12" id="myBoard">
 						<div class="motto">
 							<h2>Cele to marzenia z wyznaczoną datą realizacji.</h2>
-                            <h3>Pamiętaj: jak się rozjeżdża sprawdz rzędy! ROW MA -15 MARGIN!</h3>
 						</div>
 					</div>
 					<div class="panel importantDates col-md-2 hidePanel">
@@ -99,10 +132,11 @@
 								<div>
 									<label>Ważne wydarzenia</label>
 									<ul>
-										<li>27-28 uczę się do egzaminu</li>
-										<li>30.05.deadline projektu</li>
-										<li>31.05 Egzamin</li>
+										<li>One</li>
+										<li>Two</li>
+										<li>Three</li>
 									</ul>
+									<button class="addNew btn-succes btn-md"><span class="glyphicon glyphicon-plus"></span></button>
 								</div>
 							</div>
 						</div>
@@ -114,6 +148,7 @@
 	<!-- </div> -->
 	<script src="js/app.js"></script>
 	<script src="js/tools.js"></script>
-    <script src="js/addTask.js"></script>
+  <script src="js/addTask.js"></script>
+  <script src="js/todo.js"></script>
 </body>
 </html>

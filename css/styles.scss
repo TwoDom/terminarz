@@ -3,6 +3,7 @@ body {
 	line-height: normal;
 	padding: 0;
 	margin: 0;
+	// background-image: url("../img/jellyfish.jpg");
 }
 /*IMPORT EXTERNAL FILES*/
 // @insert 'month';
@@ -21,7 +22,7 @@ $panel-background: #aa0559;
 /*BLUE-ORANGE BULB*/
 
 @mixin mainTheme {
-	background-image: url("../img/light.jpg");
+	background-image: url("../img/jellyfish.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -69,7 +70,6 @@ nav {
 	height: 70%;
 }
 .container {
-	background-color: lightcyan;
 	width: 95%;
 	height: 100%;
 	margin-bottom: 10px;
@@ -84,10 +84,24 @@ nav {
 }
 
 .panel {
-	background-color: $panel-background;
-	color: white;
 	height: 100%;
-	border: 1px solid #fff;
+	border: 1px solid purple;
+	opacity: 0.8;
+	.panelHeader {
+		margin-top: 10px;
+		.badge {
+			float: right;
+		}
+		button {
+			float: right;
+		}
+	}
+	hr {
+		margin-top: 5px;
+		margin-bottom: 10px;
+	  border: 0;
+	  border-top: 1px solid #ababab;
+	}
 }
 
 footer {
@@ -104,9 +118,8 @@ footer {
 
 /*ELEMENTS*/
 button {
-	background-color: #000;
+	background-color: purple;
 	color: white;
-	border-radius: 15px;
 }
 
 ul {
@@ -115,5 +128,14 @@ ul {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
+	}
+}
+
+.done{
+	.title{
+		text-decoration: line-through;
+	}
+	.glyphicon-ok {
+		color: green;
 	}
 }
