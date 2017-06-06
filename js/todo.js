@@ -1,17 +1,17 @@
-var app = angular.module('todoApp', []); 
+var app = angular.module('todoApp', []);
 
 app.controller('todoListController', ['$scope', '$filter', function($scope, $filter){
-  
 
-/*Przykładowa lista zadań*/  
+
+/*Przykładowa lista zadań*/
     $scope.todos = [
         {text: 'learn angular', done: false},
         {text: 'buy vegetables', done: false}
     ];
-    
+
 /*Licz elementy listy*/
     $scope.getTotalTodos = function(){
-        return $scope.todos.length; 
+        return $scope.todos.length;
     };
 
 /*Zostaw tylko nieukończone elementy (usuń ukończone) zamień stos*/
@@ -26,6 +26,4 @@ app.controller('todoListController', ['$scope', '$filter', function($scope, $fil
         $scope.todos.push({text:$scope.formTodoText, done: false});
         $scope.formTodoText = '';
     };
-
-    
 }]);
