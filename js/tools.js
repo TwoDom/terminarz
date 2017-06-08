@@ -1,35 +1,34 @@
-/*Load Main view*/
-$enterButton = $("#pageEnterButton");
-$enterButton.on('click', function(){
-    $elementHidden = $(".elementHidden");
-    $header = $("header");
-    $footer = $('footer');
-    $enterButton.addClass("elementHidden");
-    $header.animate({height:'12vh'},1000);
-    $elementHidden.removeClass("elementHidden");
-    $footer.animate({height: '5vh'},1000);
-});
 
- /*Who knows - some idea*/
 $(function(){
-    $('#switcher a').click(function(e){
-        e.preventDefoult();
-        var rel = $(this).data('rel');
-        $('#tabs div').hide();
-        $('#tabs div').each(function(){
-            var actualTab = $(this).data('tab');
-            if (actualTab == rel){
-                $(this).show();
-            }
-        });
-    });
+	/*Load Main view*/
+	$enterButton = $("#pageEnterButton");
+	$enterButton.on('click', function(){
+		$elementHidden = $(".elementHidden");
+		$header = $("header");
+		$footer = $('footer');
+		$enterButton.addClass("elementHidden");
+		$header.animate({height:'12vh'},1000);
+		$elementHidden.removeClass("elementHidden");
+		$footer.animate({height: '5vh'},1000);
+	});
+
+
 });
 
-function myFunction(event) {
-    var x = event.target;
-    document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
-}
-
+/*Who knows - some idea*/
+$(function(){
+	$('#switcher a').click(function(e){
+		e.preventDefoult();
+		var rel = $(this).data('rel');
+		$('#tabs div').hide();
+		$('#tabs div').each(function(){
+			var actualTab = $(this).data('tab');
+			if (actualTab == rel){
+				$(this).show();
+			}
+		});
+	});
+});
 
 /*Load panels*/
 $dreamListBtn = $("#dreamListBtn");
@@ -57,14 +56,12 @@ $importantBtn = $("#importantBtn");
 $importantBtn.on('click', function(){
 	$importantDates = $('.importantDates');
 	$importantDates.toggleClass("hidePanel");
-	console.log("done!")
 	resizePanel();
 })
 
 /*Change panel size*/
 function resizePanel(){
 	var hiddenPanels = $(".hidePanel");
-	console.log(hiddenPanels.length)
 	$myBoard = $("#myBoard");
 	if (hiddenPanels.length === 3){
 		$myBoard.removeClass().addClass("panel col-md-10");
@@ -77,4 +74,4 @@ function resizePanel(){
 	} else {
 		$myBoard.removeClass().addClass("panel col-md-12")
 	};
-	};
+};

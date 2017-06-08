@@ -1,103 +1,92 @@
 $(function(){
 
-	/*Show input window*/
-	$('.addNew').click(function(e){
+	function showInputWindow() {
+		var inputEl = '';
+		inputEl += '<div class="newWindow">';
+		inputEl += '<input type="text" class="form-control" placeholder="Tytuł"/>';
+		inputEl += '<button class="btn btn-primary btn-md acceptBtn">Dodaj</button>';
+		inputEl += '<a class="close">X</a>';
+		inputEl += '</div>';
+		return inputEl;
+	}
+
+	/*Show input window into the right panel*/
+	$(".addNew").on('click', function(e){
 		e.preventDefault();
-		if ($('.addingWindow').length > 0){
+		$(this).hide();
+
+		if ($('.newWindow').length > 0){
 			return alert('Zapisz zmiany');
 		}
-		$(showInputWindow()).appendTo('.nowa');
+		$(this).parent().append(showInputWindow());
 	});
+
 
 	/*Add new task to the list*/
 	$(document).on('click','.acceptBtn',function(e){
-		console.log('hej');
-		var listEl = $('.acceptBtn').prev().val();
 
-		function addElement(){
-			var elem = '';
-			elem = "<li><input type='checkbox'></input>"
-			elem +="<span class='titleEl'>"+ listEl +"</span>"
-			elem +="<span class='glyphicon glyphicon-heart'></span>"
-			elem +="<span class='glyphicon glyphicon-ok'></span>"
-			elem +="<span class='glyphicon glyphicon-pencil'></span>"
-			elem +="<span class='glyphicon glyphicon-remove'></span>"
-			elem +="</li>"
-			return elem;
+		var inputValue = $(this).prev().val();
+		if (inputValue.length > 0) {
+			var elem = "<li class='newListEl'>"
+			elem +="<span class='elTitle'> "+ inputValue +"</span></li>"
+			$(this).parent().siblings("ul").append(elem);
+		} else {
+			return alert('Insert value');
 		}
-		$(addElement()).appendTo('.nowa');
+		$(this).next('a.close').trigger('click');
+
+	});
+
+	$(document).on('click', 'a.close', function(){
+		$(this).parent().queue(function(){
+			this.remove();
+			$(".addNew").show();
+		});
 	});
 
 	/*Count list elements*/
-	var amount = $('.titleEl').length;
-	$('span.tasks').text(amount);
+	// $(document).on('click', ".acceptBtn", function(e){
+	// 	console.log($(event.target).parent().prev());
+	// 	// var x = $($(event.target).parents().children("ul").children()).length + 1;
+	// 	// 	console.log($(event.target).parents().children("ul").children());
+	// 	// 	console.log($($(event.target).parents().children("ul").children()).length + 1);
+	//
+	// 	var amount = $(".newListEl").length;
+	// 	$('span.tasks').text(amount);
+
+	// amount++
+	// console.log(amount)
+	// console.log($(this).parents(".panel").find(".badge"))
+	// $(this).parents(".panel").find(".badge").text(amount);
+	// });
+	// amount++
+	// $($(this).parent().siblings(".panelHeader").children(".badge")).text(amount);
 
 });
 
-function showInputWindow() {
 
-	var inputEl = '';
-
-	inputEl += "<li class='addingWindow'>";
-	inputEl += '<input type="text" class="form-control"/>';
-	// inputEl += '<textarea name="description" rows="4"/>'
-	// inputEl += '<button class="btn btn-primary btn-md">Opis</button>';
-	// inputEl += '<button class="btn btn-primary btn-md"><span class="glyphicon glyphicon-heart"></span></button>';
-	// inputEl += '<button class="btn btn-primary btn-md">Termin</button>';
-	inputEl += '<button class="btn btn-primary btn-md acceptBtn">Dodaj</button>';
-	inputEl += '<a class="close">X</a>';
-	inputEl += '</li>';
-	return inputEl;
-	// $('.nowa').append(inputEl);
-}
+// function countListEl(){
+// 	// var amount = $(this).parents(".panel").find("li.newListEl").length;
+// 	console.log($(this).parents(".panel").find(".newListEl"));
+// 	// return $('span.tasks').text(amount);
+// }
 
 
+/*****************************************************************************/
 // /*Remove ended task from the list*/
 //
 // function markDone(){
 //
 // }
-
-
-
-
-
-
-
-
-
-
 /*Defoult task list*/
 
 
-// var app = angular.module('todoApp', []);
-//
-// app.controller('todoListController', ['$scope', '$filter', function($scope, $filter){
-//
-//
-// /*Przykładowa lista zadań*/
-//     $scope.todos = [
-//         {text: 'learn angular', done: false},
-//         {text: 'buy vegetables', done: false}
-//     ];
-//
-// /*Licz elementy listy*/
-//     $scope.getTotalTodos = function(){
-//         return $scope.todos.length;
-//     };
-//
-// /*Zostaw tylko nieukończone elementy (usuń ukończone) zamień stos*/
-//     $scope.clearCompleted = function(){
-//         $scope.todos = $filter('filter')($scope.todos, function(todo){
-//             return !todo.done;
-//         });
-//     };
-//
-// /*Dodaj nowe zadanie do listy*/
-//     $scope.addToDo = function(){
-//         $scope.todos.push({text:$scope.formTodoText, done: false});
-//         $scope.formTodoText = '';
-//     };
-//
-//
-// }]);
+// elem +="<span class='glyphicon glyphicon-heart'></span>"
+// elem +="<span class='glyphicon glyphicon-ok'></span>"
+// elem +="<span class='glyphicon glyphicon-pencil'></span>"
+// elem +="<span class='glyphicon glyphicon-remove'></span>"
+
+// inputEl += '<textarea name="description" rows="4"/>'
+// inputEl += '<button class="btn btn-primary btn-md">Opis</button>';
+// inputEl += '<button class="btn btn-primary btn-md"><span class="glyphicon glyphicon-heart"></span></button>';
+// inputEl += '<button class="btn btn-primary btn-md">Termin</button>';
